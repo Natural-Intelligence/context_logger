@@ -55,4 +55,5 @@ write_db_log: true,
 })
 ```
 The log entries from the DB are available via HTTP API:
-http://<server_name>/api/v1/resources/context_logger
+
+http://server_name/api/v1/resources/context_logger
