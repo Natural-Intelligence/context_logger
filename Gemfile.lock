@@ -1,0 +1,14 @@
+PATH
+  remote: .
+  specs:
+    context_logger (0.0.37)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  context_logger!
