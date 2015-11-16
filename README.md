@@ -34,3 +34,14 @@ To see current value of options, just call:
 ```
 ContextLogger.options
 ```
+## Logging
+ContextLogger exposes the following methods for logging:
+:info, :warn, :error, :debug, :fatal
+And here are the params (with defaults):
+```
+message, method, params, stack_trace=nil, action_id=nil, context=nil ,server=nil
+```
+An example of logging a warning message:
+```
+ContextLogger.warn('Just another message', :store_data, {data:{a:1, b:2}}, "'Range.detach' is now a no-op, as per DOM (http://dom.spec.whatwg.org/#dom-range-detach).", 1)
+```
