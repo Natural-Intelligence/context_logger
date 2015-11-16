@@ -4,7 +4,7 @@ In your Gemfile add:
 ```
 gem 'context_logger'
 ```
-## Usage
+## Setting destinations
 In your config file (e.g. config/environment.rb) add
 ```
 ContextLogger.set_destinations(:all)
