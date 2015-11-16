@@ -45,3 +45,14 @@ An example of logging a warning message:
 ```
 ContextLogger.warn('Just another message', :store_data, {data:{a:1, b:2}}, "'Range.detach' is now a no-op, as per DOM (http://dom.spec.whatwg.org/#dom-range-detach).", 1)
 ```
+## HTTP API:
+In order to write the log also to db_log, you should set it using set_destination method:
+```
+ContextLogger.set_destinations({
+...
+write_db_log: true,
+...
+})
+```
+The log entries from the DB are available via HTTP API:
+http://<server_name>/api/v1/resources/context_logger
