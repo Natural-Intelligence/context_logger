@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    context_logger (0.0.50)
+    context_logger (0.0.51)
 
 GEM
   remote: https://rubygems.org/
@@ -12,3 +12,6 @@ PLATFORMS
 
 DEPENDENCIES
   context_logger!
+
+BUNDLED WITH
+   1.14.6
