@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = 'context_logger'
   s.version     = '0.0.52'
-  s.date        = '2017-03-27'
+  s.date        = '2017-08-10'
   s.summary     = 'Writes log by context'
   s.description = 'Writes log to db and log files (configurable destinations) according the context and exposes the log entries via http'
-  s.authors     = ['Alexander Libster','Simon Levin']
+  s.authors     = ['Alexander Libster','Simon Levin','David Ron']
   s.email       = 'simon@naturalint.com'
   s.files         = `git ls-files`.split($/)
   s.homepage    = 'https://github.com/Natural-Intelligence/context_logger'
