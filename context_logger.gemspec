@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'context_logger'
-  s.version     = '0.0.51'
+  s.version     = '0.0.52'
   s.date        = '2017-03-27'
   s.summary     = 'Writes log by context'
   s.description = 'Writes log to db and log files (configurable destinations) according the context and exposes the log entries via http'
