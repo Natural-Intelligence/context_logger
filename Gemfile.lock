@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    context_logger (0.0.52)
+    context_logger (0.0.53)
 
 GEM
   remote: https://rubygems.org/

@@ -1,7 +1,7 @@
 module API
   module V1
     module Resources
-      class ContextLoggersController < ::ApplicationController
+      class ContextLoggersController < ::ActionController::Base
         def index
             if params[:action_id].nil?
               render json: {error: 'Missing mandatory parameter action_id'}, :status => 400, layout: false
