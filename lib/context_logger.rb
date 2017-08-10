@@ -96,7 +96,11 @@ module ContextLogger
   def self.db_log_columns
     return @db_log_columns if @db_log_columns
     @db_log_columns = {}
-    ::ContextLog.columns.each{|column| @db_log_columns[column.name.to_sym] = true}
+    if ::ContextLog.respond_to?(:columns)
+      ::ContextLog.columns.each{|column| @db_log_columns[column.name.to_sym] = true}
+    elsif ::ContextLog.respond_to?(:fields)
+      ::ContextLog.fields.keys.each{|column| @db_log_columns[column.to_sym] = true}
+    end
     return @db_log_columns
   end
 
