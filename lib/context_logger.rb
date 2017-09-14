@@ -25,7 +25,7 @@ module ContextLogger
 
   # build dynamically log methods for each of the SEVERITY_TYPES
   SEVERITY_TYPES.each do |severity_type|
-    define_singleton_method severity_type do |message, method, params, stack_trace=nil, action_id=nil, context=nil ,server=nil, object_id=nil, ui_message=''|
+    define_singleton_method severity_type do |message, method, params, stack_trace=nil, action_id=nil, context=nil ,server=nil, object_id=nil, ui_message=nil|
       self.log({severity: severity_type, context: context, server: server, action_id: action_id, method: method, params: params, message: message, stack_trace: stack_trace, object_id: object_id, ui_message: ui_message})
     end
   end
