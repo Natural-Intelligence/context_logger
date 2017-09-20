@@ -5,6 +5,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    context_logger (0.0.55)
 
 PLATFORMS
   ruby
