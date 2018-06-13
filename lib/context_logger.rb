@@ -90,7 +90,11 @@ module ContextLogger
   end
 
   def self.write_db_log(params_with_defaults)
-    ::ContextLog.create(params_with_defaults.select{|k, _| db_log_columns[k]})
+    result = Thread.new do # This is to make the ContextLog independent of transactions in main app
+      ActiveRecord::Base.connection_pool.with_connection do
+        ::ContextLog.create(params_with_defaults.select{|k, _| db_log_columns[k]})
+      end
+    end
   end
 
   def self.db_log_columns
